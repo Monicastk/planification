@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Registration;
 use App\Form\RegistrationType;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -16,7 +17,8 @@ class RegistrationController extends AbstractController
     #[Route('/inscription', name: 'app_registration')]
     public function subscribe(Request $request , EntityManagerInterface $em,EventDispatcherInterface $dispatcher): Response
     {
-        $registration = new Reg
+        $registration = new Registration;
+
         return $this->render('index/registration.html.twig', [
             'controller_name' => 'Inscription',
         ]);
