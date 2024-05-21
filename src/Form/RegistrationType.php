@@ -18,16 +18,18 @@ class RegistrationType extends AbstractType
         $builder
             ->add('name', TextType::class,  
             [
-                'label' => 'name'
+                'label' => 'prénom'
             ])
             ->add('lastname', TextType::class ,
             [
-                'label' => 'lastname'
+                'label' => 'nom de famille'
             ])
             ->add('email', EmailType::class, [
                 'label' => 'email'
             ])
-            ->add('password', RepeatedType::class)
+            ->add('password', RepeatedType::class, [
+                'label' => 'mot de passe'
+            ]) 
             ->add('submit', SubmitType::class)
         ;
     }

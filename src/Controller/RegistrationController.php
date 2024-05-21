@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Registration;
 use App\Form\RegistrationType;
-use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -16,9 +16,19 @@ class RegistrationController extends AbstractController
     #[Route('/inscription', name: 'app_registration')]
     public function subscribe(Request $request , EntityManagerInterface $em,EventDispatcherInterface $dispatcher): Response
     {
-        $registration = new Reg
+        $registration = new Registration();
+
+        $form = $this->createForm(RegistrationType::class, $registration);
+     
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            
+        }
+
         return $this->render('index/registration.html.twig', [
             'controller_name' => 'Inscription',
+            'form' => $form
         ]);
     }
 
