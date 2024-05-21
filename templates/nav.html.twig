@@ -1,0 +1,98 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <!-- Container wrapper -->
+  <div class="container">
+    <!-- Navbar brand -->
+    <a class="navbar-brand me-2" href="https://mdbgo.com/">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+        height="16"
+        alt="MDB Logo"
+        loading="lazy"
+        style="margin-top: -1px;"
+      />
+    </a>
+
+    <!-- Toggle button -->
+    <button
+      data-mdb-collapse-init
+      class="navbar-toggler"
+      type="button"
+      data-mdb-target="#navbarButtonsExample"
+      aria-controls="navbarButtonsExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarRightAlignExample">
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href=" {{ path('app_index')}}">Accueil </a>
+        </li>
+    
+
+      <!-- Left links -->
+
+      <div class="d-flex align-items-center">
+         <!-- Navbar dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            data-mdb-dropdown-init
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            aria-expanded="false"
+          >
+            Professionnel
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="{{path('app_registration')}}">S'inscrire</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="{{ path('app_login')}}">Se connecter</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+         <!-- Navbar dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            data-mdb-dropdown-init
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            aria-expanded="false"
+          >
+            Particulier
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="{{path('app_registration')}}">S'inscrire</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="{{ path('app_login')}}">Se connecter</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="">Something else here</a>
+            </li>
+          </ul>
+     
+      </div>
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
