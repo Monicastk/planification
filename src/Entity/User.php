@@ -26,7 +26,8 @@ class User
 
     #[ORM\Column(length: 50)]
     #[Assert\Length(min:2, Length:50)]
-    private ?string $lastname = null;
+    private ?string $lastname = null;   
+    
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true)]
     private ?int $number = null;
